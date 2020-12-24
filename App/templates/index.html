@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles/styles.css">
+  <title>Sports Analytics</title>
+</head>
+<body style="background-color:#121212; color:rgb(247, 81, 20);">
+  <form action="#" method="POST">
+    <div>
+      <center><img src="/static/images/cricket-bat(1).png" alt="Batting Team" style = "position:relative; width: 100px; height:100px; top:50px;" class = "bat-img"></center></br>
+      <div class="batting-team-logos">
+        <input type="radio" name="batting" value="Mumbai Indians" id="mi" disabled>
+          <label for="mi">  <img src="{{url_for('static', filename='logos/mi1.png')}}"> </label>
+        <input type="radio" name="batting" value="Delhi Capitals" id="dc">
+          <label for="dc"><img src="{{url_for('static', filename='logos/dc.png')}}"></label>
+        <input type="radio" name="batting" value="Sunrisers Hyderabad" id="srh">
+          <label for="srh"><img src="{{url_for('static', filename='logos/srh.png')}}"></label>
+        <input type="radio" name="batting" value="Royal Challengers Bangalore" id="rcb">
+          <label for="rcb"><img src="{{url_for('static', filename='logos/rcb.png')}}"></label>
+        <input type="radio" name="batting" value="Kolkata Knight Riders" checked id="kkr">
+          <label for="kkr"><img src="{{url_for('static', filename='logos/kkr.png')}}"></label>
+        <input type="radio" name="batting" value="Chennai Super Kings" id="csk">
+          <label for="csk"><img src="{{url_for('static', filename='logos/csk.png')}}"></label>
+        <input type="radio" name="batting" value="Kings XI Punjab" id="kxip">
+          <label for="kxip"><img src="{{url_for('static', filename='logos/kxip.png')}}"></label>
+        <input type="radio" name="batting" value="Rajasthan Royals" id="rr">
+          <label for="rr"><img src="{{url_for('static', filename='logos/rr.png')}}"></label>
+      </div>
+
+      <center><img src="/static/images/cricket-ball(1).png" alt="Bowling Team" style = "position:relative; width: 70px; height:70px; top:25px;" class = "ball-img"></center></br>
+      <div class="bowling-team-logos">
+        <input type="radio" name="bowling" value="Mumbai Indians" checked id="mi1">
+          <label for="mi1">  <img src="{{url_for('static', filename='logos/mi1.png')}}"> </label>
+        <input type="radio" name="bowling" value="Delhi Capitals" id="dc1">
+          <label for="dc1"><img src="{{url_for('static', filename='logos/dc.png')}}"></label>
+        <input type="radio" name="bowling" value="Sunrisers Hyderabad" id="srh1">
+          <label for="srh1"><img src="{{url_for('static', filename='logos/srh.png')}}"></label>
+        <input type="radio" name="bowling" value="Royal Challengers Bangalore" id="rcb1">
+          <label for="rcb1"><img src="{{url_for('static', filename='logos/rcb.png')}}"></label>
+        <input type="radio" name="bowling" value="Kolkata Knight Riders" id="kkr1" disabled>
+          <label for="kkr1"><img src="{{url_for('static', filename='logos/kkr.png')}}"></label>
+        <input type="radio" name="bowling" value="Chennai Super Kings" id="csk1">
+          <label for="csk1"><img src="{{url_for('static', filename='logos/csk.png')}}"></label>
+        <input type="radio" name="bowling" value="Kings XI Punjab" id="kxip1">
+          <label for="kxip1"><img src="{{url_for('static', filename='logos/kxip.png')}}"></label>
+        <input type="radio" name="bowling" value="Rajasthan Royals" id="rr1">
+          <label for="rr1"><img src="{{url_for('static', filename='logos/rr.png')}}"></label>
+      </div>
+      
+    </div>
+  
+
+</form> 
+<script>
+  // const t= document.querySelector("[name=bowling]:checked").value; -> Direct value for selected bowling team
+  const bowling_div = document.querySelector(".bowling-team-logos");
+  const batting_div = document.querySelector(".batting-team-logos");
+  bowling_div.addEventListener("click", getSelectedBowling);
+  batting_div.addEventListener("click", getSelectedBatting);
+  let bowling = 0; 
+  let batting = 4;
+  const bowling_button = document.getElementsByName("bowling");
+  const batting_button = document.getElementsByName("batting");
+
+  function getSelectedBowling(){
+    batting_button[bowling].disabled = false;
+    for (let i=0; i<8; i++){
+      if (bowling_button[i].checked) bowling=i;}
+    batting_button[bowling].disabled = true;}
+
+  function getSelectedBatting(){
+    bowling_button[batting].disabled = false;
+    for (let i=0; i<8; i++){
+      if (batting_button[i].checked) batting=i;}
+    bowling_button[batting].disabled = true;}
+
+
+</script>
+</body>
+</html>

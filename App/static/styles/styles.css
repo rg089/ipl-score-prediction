@@ -1,0 +1,64 @@
+.batters
+{
+  background-color:rgb(247, 81, 20); 
+  color:black;
+}
+
+
+input[type=radio]
+{
+  display: none;
+}
+
+div.batting-team-logos img
+{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 46px;
+  left: 15px;
+  top: 20px;
+  opacity: 0.8;
+}
+
+div.bowling-team-logos img
+{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 46px;
+  left: 15px;
+  top: 20px;
+  opacity: 0.8;
+}
+
+
+
+div.batting-team-logos :checked+label img
+{
+  transform: scale(1.1);
+  opacity: 2;
+  border-color:rgb(199, 251, 255);
+  border-radius: 100%;
+  padding:20px;
+  border-width: 0.1px;
+  border-style: solid;
+  box-shadow:0 0 18px rgb(104, 222, 255);
+}
+
+/* :checked+label::before {
+  content: "✓";
+  color: orangered;
+} */
+
+div.bowling-team-logos :checked+label img
+{
+  transform: scale(1.1);
+  opacity: 2;
+  border-color:rgb(255, 101, 242);
+  border-radius: 100%;
+  padding:18px;
+  border-width: 0.1px;
+  border-style: solid;
+  box-shadow:0 0 18px rgb(255, 110, 199);
+}
