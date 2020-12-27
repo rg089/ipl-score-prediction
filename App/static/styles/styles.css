@@ -26,34 +26,46 @@
   font-family: "predict";
   src: url("/static/fonts/blackjack.otf");}
 
+
+body {
+  margin: 0;
+  background-color: black;
+  overflow-x: hidden;
+}
+
 .header{
   background-color:rgb(29, 29, 29);
+  overflow: hidden;
   position: relative;
-  top: -55px;
-  height: 300px;
-  
 }
 
  .h1{
-  font-family: 'heading'; 
-  font-size: 90px; 
+  font-family: 'heading';
+  font-size: calc(25px + 4.2vw);
   font-weight: 600;
   color: paleturquoise;
   text-shadow: 0 0 8px rgb(0, 255, 242);
-  position: absolute;
-  top:5px;
-  left:520px;
+  position: relative;
+  text-align: center;
+  /* left:0;
+  width: 100%; */
+  
  }
  
  .h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 45px;
+  font-size: calc(2.13vw + 12.31px);
   color: aliceblue;
   text-shadow: 0 0 12px rgb(255, 250, 195);
-  position: absolute;
-  bottom: 5px;
-  left: 610px;
+  position: relative;
+  /* bottom: 5px;
+  left: 0px;
+  width: 100%; */
+ }
+
+ form{
+   padding-top: 5%;
  }
 
 
@@ -61,39 +73,38 @@ input[type=radio]{
   display: none;
 }
 
-body {
-  background-color: black;
-  overflow-x: hidden;
- }
 
  [class*=text]{
   font-family: "cursive";
-  font-size: 60px;
+  font-size: calc(3.45vw + 7.08px);
   font-weight: 700;
   color: orangered;
   text-shadow: 0 0 14px rgb(255, 34, 5);
 }
 
+div[class*="-team-logos"]{
+  max-width: 95%;
+  margin: 4% auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 div.batting-team-logos img
 {
-  width:100px;
-  height: 100px;
-  position: relative;
-  margin:46px;
-  left: 15px;
+  width:8vw;
+  height: 8vw;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 
 div.bowling-team-logos img
 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  margin: 46px;
-  left: 15px;
+  width: 8vw;
+  height: 8vw;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 div.batting-team-logos :checked+label img
@@ -102,8 +113,8 @@ div.batting-team-logos :checked+label img
   opacity: 2;
   border-color:rgb(199, 251, 255);
   border-radius: 100%;
-  padding:18px;
-  left: 3px;
+  padding: 1.26vw;
+  left: 0.21vw;
   border-width: 0.1px;
   border-style: solid;
   box-shadow:0 0 18px rgb(104, 222, 255);
@@ -115,35 +126,43 @@ div.bowling-team-logos :checked+label img
   opacity: 2;
   border-color:rgb(255, 101, 242);
   border-radius: 100%;
-  padding:18px;
-  left: 3px;
+  padding: 1.26vw;
+  left: 0.21vw;
   border-width: 0.1px;
   border-style: solid;
   box-shadow:0 0 18px rgb(255, 110, 199);
 }
 
+:disabled+label img{
+  cursor: not-allowed;
+}
+
+div.toss-decision{
+  max-width: 25%;
+  margin: 3% auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 div.toss-decision img
 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  margin: 46px;
-  left: 605px;
-  top: 20px;
+  width: 8vw;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 
 div.toss-decision :checked+label img
 {
-  transform: scale(1.1);
+  transform: scale(1.01);
   opacity: 2;
   border-color:rgb(51, 255, 0);
   border-radius: 100%;
-  padding:20px;
+  padding: 1.8vw;
   border-width: 0.1px;
   border-style: solid;
-  box-shadow:0 0 18px rgb(76, 255, 85);
+  box-shadow:0 0 12px rgb(76, 255, 85);
 }
 
 .text-inps{
@@ -157,77 +176,78 @@ input[type=text]{
   border-bottom: 2px solid deeppink;
   color:snow;
   background-color: black;
-  width: 20%;
+  width: 25%;
   font-family: "ultrathins";
-  font-size: 30px;
-  padding: 20px;
+  font-size: calc(2.3vw + 1.73px);
+  padding: 0.7%;
 }
 
 input[type=text]:focus{
+  background-color: transparent;
   box-shadow: 0 0 25px rgb(255, 133, 239);
   clip-path: inset(0px 0px -25px 0px);
-  width: 21%;
+  width: 26%;
 }
 
 .score-text{
   position: absolute;
-  top: 40px;
-  left: 150px;
+  top: 1%;
+  left: 12%;
 }
 
 #current_score{
   position: absolute;
-  top: 120px;
-  left: 30px;
+  top: 17%;
+  left: 2%;
 }
 
 
 .runs-6-text{
   position: absolute;
-  bottom: 120px;
-  left: 50px;
+  bottom: 17%;
+  left: 3.3%;
 }
 
 #last_6_score{
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 2%;
+  left: 3.3%;
 }
 
 .overs-text{
   position: absolute;
-  top: 260px;
-  left: 670px;
+  top: 30%;
+  left: 41.7%;
 }
 
 #overs{
   position: absolute;
-  top: 340px;
-  left: 630px;
+  top: 48.16%;
+  left: 39.1%;
 }
 
 .wickets-text{
   position: absolute;
-  top: 40px;
-  right: 150px;
+  top: 1%;
+  right: 10%;
 }
 
 #current_wickets{
   position: absolute;
-  top: 120px;
-  right: 30px;
+  top: 17%;
+  right: 3.3%;
 }
 
 .wickets-6-text{
   position: absolute;
-  bottom: 120px;
-  right: 30px;
+  bottom: 17%;
+  right: 3.3%;
 }
 
 #last_6_wickets{
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: 2%;
+  right: 3.3%;
 }
 
 
@@ -236,16 +256,18 @@ input[type=text]:focus{
   color: black;
   border-radius: 45%;
   border-color: transparent;
-  width: 160px;
-  height: 90px;
+  width: 11%;
+  height: 9.5%;
   position: absolute;
-  bottom: -130px;
-  left: 750px;
+  bottom: -18%;
+  left: 45%;
+  cursor: pointer;
 }
 
 .submit-button span::after{
   font-family: "submit";
-  font-size: 35px;
+  font-size: calc(2.31vw + -0.54px);
+  text-align: center;
   content: "Predict!";
   
 }
@@ -262,22 +284,21 @@ input[type=text]:focus{
 
 .credits{
   position: relative;
-  top: 180px;
+  top: 12vw;
   background-color: rgb(29, 29, 29);
 }
 
 .used{
-  padding-top: 25px;
+  padding-top: 2%;
   font-family: "used";
-  font-size: 28px;
+  font-size: calc(1.37vw + 6.94px);
   color: rgb(255, 2, 36);
   font-weight: 500px;
 }
 
 .sign{
   font-family: "sign";
-  font-weight: 700px;
-  font-size: 35px;
+  font-size: calc(1.45vw + 12.8px);
   color: ghostwhite;
 }
 
@@ -291,24 +312,23 @@ input[type=text]:focus{
 }
 
 .team {
-  width: 200px;
-  height: 200px;
+  width: 18vw;
+  height: 18vw;
   border-radius: 5%;
   box-shadow: 0 0 8px ghostwhite;
 }
 
 .team.a {
   position: absolute;
-  left: 550px;
-  top:15px;
+  left: 25%;
+  top:5%;
 }
 
 .prediction span:nth-of-type(1){
-  font-weight: 700;
-  font-size: 60px;
+  font-size: calc(3.74vw + 2.53px);
   position: absolute;
-  left:790px;
-  top: 90px;
+  left:48%;
+  top: calc(4.25vw + 39.69px);
   color: wheat;
   font-family: "heading";
   text-shadow: 0 0 5px deeppink;
@@ -317,16 +337,15 @@ input[type=text]:focus{
 
 .team.b{
   position: absolute;
-  left: 880px;
-  top: 15px;
+  left: 55%;
+  top: 5%;
 }
 
 .predict-span{
-  font-weight: 700;
-  font-size: 50px;
+  font-size: calc(2.55vw + 10.82px);
   position: relative;
-  left: 20px;
-  top: 260px;
+  left: 3%;
+  top: 20vw;
   color: ghostwhite;
   text-shadow: 0 0 9px deeppink;
   font-family: "submit";
@@ -334,11 +353,10 @@ input[type=text]:focus{
 
 .predict-span.b{
   text-decoration: underline;
-  font-size: 65px;
+  font-size: calc(2.55vw + 15.82px);
 }
 
 .predict-span.d{
-  position: absolute;
-  left:400px;
-  top:570px;
+  position: relative;
+  top:23vw;
 }

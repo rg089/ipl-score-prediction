@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/styles/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>IPL Analytics</title>
 </head>
 
 <body>
   <div class="header">
-    <center><h1 class="h1">Indian Premier League</h1>
-    <h1 class="h2">SCORE PREDICTION</h1></center>
+    <h1 class="h1">Indian Premier League</h1>
+    <center>
+      <h2 class="h2">SCORE PREDICTION</h2>
+    </center>
   </div>
 
   <form action="#" method="POST" id="form">
@@ -20,62 +23,67 @@
       <center><span class="batting-text">Batting Team</span></center>
       <div class="batting-team-logos">
         <input type="radio" name="batting" value="Mumbai Indians" id="mi" disabled>
-          <label for="mi">  <img src="{{url_for('static', filename='logos/mi.png')}}"> </label>
+        <label for="mi"> <img src="{{url_for('static', filename='logos/mi.png')}}"> </label>
         <input type="radio" name="batting" value="Delhi Capitals" id="dc">
-          <label for="dc"><img src="{{url_for('static', filename='logos/dc.png')}}"></label>
+        <label for="dc"><img src="{{url_for('static', filename='logos/dc.png')}}"></label>
         <input type="radio" name="batting" value="Sunrisers Hyderabad" id="srh">
-          <label for="srh"><img src="{{url_for('static', filename='logos/srh.png')}}"></label>
+        <label for="srh"><img src="{{url_for('static', filename='logos/srh.png')}}"></label>
         <input type="radio" name="batting" value="Royal Challengers Bangalore" id="rcb">
-          <label for="rcb"><img src="{{url_for('static', filename='logos/rcb.png')}}"></label>
+        <label for="rcb"><img src="{{url_for('static', filename='logos/rcb.png')}}"></label>
         <input type="radio" name="batting" value="Kolkata Knight Riders" checked id="kkr">
-          <label for="kkr"><img src="{{url_for('static', filename='logos/kkr.png')}}"></label>
+        <label for="kkr"><img src="{{url_for('static', filename='logos/kkr.png')}}"></label>
         <input type="radio" name="batting" value="Chennai Super Kings" id="csk">
-          <label for="csk"><img src="{{url_for('static', filename='logos/csk.png')}}"></label>
+        <label for="csk"><img src="{{url_for('static', filename='logos/csk.png')}}"></label>
         <input type="radio" name="batting" value="Kings XI Punjab" id="kxip">
-          <label for="kxip"><img src="{{url_for('static', filename='logos/kxip.png')}}"></label>
+        <label for="kxip"><img src="{{url_for('static', filename='logos/kxip.png')}}"></label>
         <input type="radio" name="batting" value="Rajasthan Royals" id="rr">
-          <label for="rr"><img src="{{url_for('static', filename='logos/rr.png')}}"></label>
+        <label for="rr"><img src="{{url_for('static', filename='logos/rr.png')}}"></label>
       </div>
 
       <center><span class="batting-text">Bowling Team</span></center>
       <div class="bowling-team-logos">
         <input type="radio" name="bowling" value="Mumbai Indians" checked id="mi1">
-          <label for="mi1">  <img src="{{url_for('static', filename='logos/mi.png')}}"> </label>
+        <label for="mi1"> <img src="{{url_for('static', filename='logos/mi.png')}}"> </label>
         <input type="radio" name="bowling" value="Delhi Capitals" id="dc1">
-          <label for="dc1"><img src="{{url_for('static', filename='logos/dc.png')}}"></label>
+        <label for="dc1"><img src="{{url_for('static', filename='logos/dc.png')}}"></label>
         <input type="radio" name="bowling" value="Sunrisers Hyderabad" id="srh1">
-          <label for="srh1"><img src="{{url_for('static', filename='logos/srh.png')}}"></label>
+        <label for="srh1"><img src="{{url_for('static', filename='logos/srh.png')}}"></label>
         <input type="radio" name="bowling" value="Royal Challengers Bangalore" id="rcb1">
-          <label for="rcb1"><img src="{{url_for('static', filename='logos/rcb.png')}}"></label>
+        <label for="rcb1"><img src="{{url_for('static', filename='logos/rcb.png')}}"></label>
         <input type="radio" name="bowling" value="Kolkata Knight Riders" id="kkr1" disabled>
-          <label for="kkr1"><img src="{{url_for('static', filename='logos/kkr.png')}}"></label>
+        <label for="kkr1"><img src="{{url_for('static', filename='logos/kkr.png')}}"></label>
         <input type="radio" name="bowling" value="Chennai Super Kings" id="csk1">
-          <label for="csk1"><img src="{{url_for('static', filename='logos/csk.png')}}"></label>
+        <label for="csk1"><img src="{{url_for('static', filename='logos/csk.png')}}"></label>
         <input type="radio" name="bowling" value="Kings XI Punjab" id="kxip1">
-          <label for="kxip1"><img src="{{url_for('static', filename='logos/kxip.png')}}"></label>
+        <label for="kxip1"><img src="{{url_for('static', filename='logos/kxip.png')}}"></label>
         <input type="radio" name="bowling" value="Rajasthan Royals" id="rr1">
-          <label for="rr1"><img src="{{url_for('static', filename='logos/rr.png')}}"></label>
+        <label for="rr1"><img src="{{url_for('static', filename='logos/rr.png')}}"></label>
       </div>
       <center><span class="toss-text">Toss Decision</span></center>
 
       <div class="toss-decision">
         <input type="radio" name="toss" value="bat" checked id="bat">
-          <label for="bat">  <img src="{{url_for('static', filename='images/cricket-bat(1).png')}}"> </label>
+        <label for="bat"> <img src="{{url_for('static', filename='images/cricket-bat(1).png')}}"> </label>
         <input type="radio" name="toss" value="field" id="bowl">
-          <label for="bowl"><img src="{{url_for('static', filename='images/cricket-ball(1).png')}}"></label>
+        <label for="bowl"><img src="{{url_for('static', filename='images/cricket-ball(1).png')}}"></label>
       </div>
-      
+
       <div class="text-inps">
         <span class="score-text">Score</span></br>
-        <input type="text" inputmode="numeric" pattern="(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-7][0-9])" id="current_score" name="current_score" placeholder="Score" required></br>
+        <input type="text" inputmode="numeric" pattern="(?:[0-9]|[1-9][0-9]|1[0-9]{2}|2[0-7][0-9])" id="current_score"
+          name="current_score" placeholder="Score" required></br>
         <span class="wickets-text">Wickets</span></br>
-        <input type="text" inputmode="numeric" pattern="[0-9]" id="current_wickets" name="current_wickets" placeholder="Wickets" required></br>
+        <input type="text" inputmode="numeric" pattern="[0-9]" id="current_wickets" name="current_wickets"
+          placeholder="Wickets" required></br>
         <span class="overs-text">Current Overs</span></br>
-        <input type="text" inputmode="numeric" pattern="[6-9].[1-6]|1[0-9].[1-6]" id="overs" name="overs" placeholder="Overs (6.1 to 19.6)"  required></br>
+        <input type="text" inputmode="numeric" pattern="[6-9].[1-6]|1[0-9].[1-6]" id="overs" name="overs"
+          placeholder="Overs (6.1 to 19.6)" required></br>
         <span class="runs-6-text">Runs in Last 6 Overs</span></br>
-        <input type="text" inputmode="numeric" pattern="(?:[0-9]|[1-9][0-9]|1[0-4][0-9])" id="last_6_score" name="last_6_score" placeholder="Runs in Last 6 Overs"  required></br>
+        <input type="text" inputmode="numeric" pattern="(?:[0-9]|[1-9][0-9]|1[0-4][0-9])" id="last_6_score"
+          name="last_6_score" placeholder="Runs in Last 6 Overs" required></br>
         <span class="wickets-6-text">Wickets in Last 6 Overs</span></br>
-        <input type="text" inputmode="numeric" pattern="[0-9]" id="last_6_wickets" name="last_6_wickets" placeholder="Wickets in Last 6 Overs"  required></br>
+        <input type="text" inputmode="numeric" pattern="[0-9]" id="last_6_wickets" name="last_6_wickets"
+          placeholder="Wickets in Last 6 Overs" required></br>
         <button type="submit" class="submit-button">
           <span></span>
         </button>
@@ -83,46 +91,53 @@
       </div>
       <div class="credits">
         <center>
-          <p class="used">Prediction with XGBoost Regressor, trained upto and including 2020 data.</br>Created using Flask, HTML, CSS and a modicum of JavaScript.</p>
+          <p class="used">Prediction with XGBoost Regressor, trained upto and including 2020 data.</br>Created using
+            Flask, HTML, CSS and a modicum of JavaScript.</p>
           <span class="sign">Rishabh Gupta</span></br></br>
-          <a href="https://github.com/rg089" target="_blank"><i class="fa fa-github" style="font-size:50px; color:white"></i></a></br></br>
+          <a href="https://github.com/rg089" target="_blank"><i class="fa fa-github"
+              style="font-size:50px; color:white"></i></a></br></br>
         </center>
-      </div>      
+      </div>
     </div>
   </form>
 
 
-<script>
-  // const t= document.querySelector("[name=bowling]:checked").value; -> Direct value for selected bowling team
-  const bowling_div = document.querySelector(".bowling-team-logos");
-  const batting_div = document.querySelector(".batting-team-logos");
-  
-  bowling_div.addEventListener("click", getSelectedBowling);
-  batting_div.addEventListener("click", getSelectedBatting);
+  <script>
+    // const t= document.querySelector("[name=bowling]:checked").value; -> Direct value for selected bowling team
+    const bowling_div = document.querySelector(".bowling-team-logos");
+    const batting_div = document.querySelector(".batting-team-logos");
 
-  let bowling = 0; 
-  let batting = 4;
+    bowling_div.addEventListener("click", getSelectedBowling);
+    batting_div.addEventListener("click", getSelectedBatting);
 
-  const bowling_button = document.getElementsByName("bowling");
-  const batting_button = document.getElementsByName("batting");
+    let bowling = 0;
+    let batting = 4;
 
-  bowling_button[bowling].checked = true; batting_button[batting].checked = true;
-  bowling_button[batting].disabled = true; batting_button[bowling].disabled = true;
+    const bowling_button = document.getElementsByName("bowling");
+    const batting_button = document.getElementsByName("batting");
 
-  function getSelectedBowling(){
-    batting_button[bowling].disabled = false;
-    for (let i=0; i<8; i++){
-      if (bowling_button[i].checked) bowling=i;}
-    if (batting==bowling) alert("Please choose different teams!");
-    batting_button[bowling].disabled = true;}
+    bowling_button[bowling].checked = true; batting_button[batting].checked = true;
+    bowling_button[batting].disabled = true; batting_button[bowling].disabled = true;
 
-  function getSelectedBatting(){
-    bowling_button[batting].disabled = false;
-    for (let i=0; i<8; i++){
-      if (batting_button[i].checked) batting=i;}
-    if (batting==bowling) alert("Please choose different teams!");
-    bowling_button[batting].disabled = true;}
-</script>
+    function getSelectedBowling() {
+      batting_button[bowling].disabled = false;
+      for (let i = 0; i < 8; i++) {
+        if (bowling_button[i].checked) bowling = i;
+      }
+      if (batting == bowling) alert("Please choose different teams!");
+      batting_button[bowling].disabled = true;
+    }
+
+    function getSelectedBatting() {
+      bowling_button[batting].disabled = false;
+      for (let i = 0; i < 8; i++) {
+        if (batting_button[i].checked) batting = i;
+      }
+      if (batting == bowling) alert("Please choose different teams!");
+      bowling_button[batting].disabled = true;
+    }
+  </script>
 
 </body>
+
 </html>
