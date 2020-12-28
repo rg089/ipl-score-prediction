@@ -12,10 +12,12 @@
 
 <body>
   <div class="header">
+    <a href="/">
     <h1 class="h1">Indian Premier League</h1>
     <center>
       <h2 class="h2">SCORE PREDICTION</h2>
     </center>
+    </a>
   </div>
 
   <form action="#" method="POST" id="form">
@@ -87,6 +89,11 @@
         <button type="submit" class="submit-button">
           <span></span>
         </button>
+
+      <div class="help">
+        <img src="{{url_for('static', filename='images/help.png')}}">
+        <span>1) The teams must be different. Otherwise, they can't be selected.</br></br>2) The toss decision is made by the team that won the toss, not necessarily the first team.</br></br>3) The input format for overs must have a decimal after it. For example, 13 overs is written as 12.6 overs.</span>
+      </div>
 
       </div>
       <div class="credits">

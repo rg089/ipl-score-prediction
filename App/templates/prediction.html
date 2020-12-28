@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,29 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <div class="header">
-        <center><h1 class="h1">Indian Premier League</h1>
-        <h1 class="h2">SCORE PREDICTION</h1></center>
+        <a href="/">
+        <h1 class="h1">Indian Premier League</h1>
+        <center>
+            <h2 class="h2">SCORE PREDICTION</h2>
+        </center>
+        </a>
+    </div>
     </div>
     <div class="prediction">
         <img src="{{url_for('static', filename='logos/'+t1+'.png')}}" class="team a">
         <span> v/s </span>
         <img src="{{url_for('static', filename='logos/'+t2+'.png')}}" class="team b"></br>
-        <span class="predict-span a">The {{data["batting"]}}, {{s}}, and being {{data["current_score"]}}/{{data["current_wickets"]}} after {{data["overs"]}} overs, are projected to score</span>
-        <span class="predict-span b"> {{score}} </span>    
+        <span class="predict-span a">The {{data["batting"]}}, {{s}}, and being
+            {{data["current_score"]}}/{{data["current_wickets"]}} after {{data["overs"]}} overs, are projected to
+            score</span>
+        <span class="predict-span b"> {{score}} </span>
         <span class="predict-span c">against the {{data["bowling"]}}.</span>
         <p></p>
         <span class="predict-span d">The predicted range is between {{score-8}} and {{score+10}}.</span>
-    </br></br>
+        </br></br>
 
 
 
@@ -32,10 +41,13 @@
     <!-- <center><h1>{{data["batting"]}} scores between {{low}} and {{up}} against {{data["bowling"]}}.</h1></center> -->
     <div class="credits">
         <center>
-            <p class="used">Prediction with XGBoost Regressor, trained upto and including 2020 data.</br>Created using Flask, HTML, CSS and a modicum of JavaScript.</p>
+            <p class="used">Prediction with XGBoost Regressor, trained upto and including 2020 data.</br>Created using
+                Flask, HTML, CSS and a modicum of JavaScript.</p>
             <span class="sign">Rishabh Gupta</span></br></br>
-            <a href="https://github.com/rg089" target="_blank"><i class="fa fa-github" style="font-size:50px; color:white"></i></a></br></br>
+            <a href="https://github.com/rg089" target="_blank"><i class="fa fa-github"
+                    style="font-size:50px; color:white"></i></a></br></br>
         </center>
-    </div>   
+    </div>
 </body>
+
 </html>
