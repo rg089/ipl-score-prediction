@@ -1,6 +1,5 @@
 import pickle
 import numpy as np
-import pandas as pd
 from flask import Flask, render_template, request, url_for
 
 app = Flask("ipl")
@@ -34,9 +33,6 @@ def map_team(s):
         return "srh"
     return "".join(map(lambda x: x[0].lower(), s.split()))
 
-
-
-
 def predict(data):
     f = open("model.pkl", "rb")
     l = []
@@ -51,10 +47,6 @@ def predict(data):
     prediction = int(model.predict(X)[0])
 
     return prediction
-
-# inputs = []
-# data = np.array(inputs)
-# predict(data)
 
 if __name__ == "__main__":
     app.run(debug=True)
