@@ -37,7 +37,7 @@
   :fire: The deliveries dataset from 2008-2019 is renamed as <a href="https://github.com/rg089/ipl-score-prediction/blob/master/Data/deliveries1.csv">deliveries1</a> and the 2020 is renamed as <a href="https://github.com/rg089/ipl-score-prediction/blob/master/Data/deliveries2.csv">deliveries2</a>.<br>
   :fire: After data manipulation and feature engineering, the modified dataset was created and saved as <a href="https://github.com/rg089/ipl-score-prediction/blob/master/Data/deliveries.csv">deliveries.csv</a> with new features created and the redundant ones dropped.</a><br>
   :fire: The model chosen was <a href="https://xgboost.readthedocs.io/en/latest/">XGBoost Regressor.</a><br>
-  :fire: See the full code with data manipulation, nodel selection and hyperparameter tuning, feature selection etc. <a href="https://github.com/rg089/ipl-score-prediction/blob/master/ML/IPL_Score_Prediction-Updated.ipynb">here.</a><br>
+  :fire: See the full code with data manipulation, model selection and hyperparameter tuning, feature selection etc. <a href="https://github.com/rg089/ipl-score-prediction/blob/master/ML/IPL_Score_Prediction-Updated.ipynb">here.</a><br>
   <br><br>
   </i>
 </p>
@@ -55,3 +55,14 @@
   </i>
 </p>
 
+<h1 align="center">:pray: Thanks!</h1>
+
+<p align="center">
+  <b>All contributions are welcome and appreciated. :+1: </b>
+  <br><br>
+  <img src="https://media3.giphy.com/media/eN4AxQLFu8gM96uvXd/giphy.gif" alt="bye" width=20% height=20%><br>
+  <b> BYE! </b><br><br>
+  <a href="https://github.com/rg089"><img src="https://i.ibb.co/M5Z4dcQ/logo4.png" alt="logo" border="0" width=7% height=7%></a>
+  <br>
+  <b><i>Rishabh Gupta :copyright:</b></i>
+</p>
